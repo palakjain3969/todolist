@@ -31,22 +31,22 @@ public class MainActivity extends AppCompatActivity {
 
         taskList = new ArrayList<>();
 
-    tasksRecyclerView = findViewById(R.id.tasksRecyclerView);
-    tasksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-    tasksAdapter = new ToDoAdapter(this);
-    tasksRecyclerView.setAdapter(tasksAdapter);
+        tasksRecyclerView = findViewById(R.id.tasksRecyclerView);
+        tasksRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        tasksAdapter = new ToDoAdapter(this);
+        tasksRecyclerView.setAdapter(tasksAdapter);
 
-    ToDoModel task = new ToDoModel();
-    task.setTask("This is a Task");
-    task.setStatus(0);
-    task.setId(1);
+        ToDoModel task = new ToDoModel();
+        task.setTask("This is a Task");
+        task.setStatus(0);
+        task.setId(1);
 
-    taskList.add(task);
-    taskList.add(task);
-    taskList.add(task);
-    taskList.add(task);
-    taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
+        taskList.add(task);
 
-    tasksAdapter.setTasks(taskList);
+        tasksAdapter.setTasks(taskList);
     }
 }
