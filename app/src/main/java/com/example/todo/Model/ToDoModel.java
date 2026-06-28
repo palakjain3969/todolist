@@ -3,6 +3,7 @@ package com.example.todo.Model;
 public class ToDoModel {
     private int id, status;
     private String task;
+    public String createdAt;
 
     public String getTask() {
         return task;
@@ -26,5 +27,14 @@ public class ToDoModel {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    // Setter for createdAt
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 }

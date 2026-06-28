@@ -9,6 +9,9 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -97,6 +100,10 @@ public class AddNewTask extends BottomSheetDialogFragment {
                     ToDoModel task = new ToDoModel();
                     task.setTask(text);
                     task.setStatus(0);
+
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy, hh:mm a", Locale.getDefault());
+                    String currentDateTime = sdf.format(new Date());
+                    task.setCreatedAt(currentDateTime);
                     db.insertTask(task);
                 }
                 dismiss();
